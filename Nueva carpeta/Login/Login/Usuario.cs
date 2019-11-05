@@ -10,6 +10,12 @@ namespace Login
         public string nombreUsuario { get; set; }
         public string contrasenia { get; set; }
 
+        public Usuario(string nombreUsuario, string contrasenia)
+        {
+            this.nombreUsuario = nombreUsuario;
+            this.contrasenia = contrasenia;
+        }
+
         public Usuario()
         {
 

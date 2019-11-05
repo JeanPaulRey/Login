@@ -10,9 +10,15 @@ namespace Login
         public Modulo modulo { get; set; }
         public List<Empleado> Empleados { get; set; }
 
-        public Empresa()
+        public Empresa(string nombre)
         {
             Empleados = new List<Empleado>();
+            this.nombre = nombre;
+        }
+
+        public Empresa()
+        {
+
         }
 
 

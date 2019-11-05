@@ -13,6 +13,13 @@ namespace Login
 
         public List<Usuario> Usuarios { get; set; }
 
+        public Modulo(string nombre, float version)
+        {
+            Usuarios = new List<Usuario>();
+            this.nombre = nombre;
+            this.version = version;
+        }
+
         public Modulo()
         {
 

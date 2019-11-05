@@ -7,8 +7,14 @@ namespace Login
     {
         public int idEmpresa { get; set; }
         public string nombre { get; set; }
-        
-        List<Empleado>
+        public Modulo modulo { get; set; }
+        public List<Empleado> Empleados { get; set; }
+
+        public Empresa()
+        {
+            Empleados = new List<Empleado>();
+        }
+
 
 
 

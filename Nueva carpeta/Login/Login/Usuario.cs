@@ -4,8 +4,15 @@ using System.Text;
 
 namespace Login
 {
-    class Usuario
+    public class Usuario
     {
+        public int idUsuario { get; set; }
+        public string nombreUsuario { get; set; }
+        public string contrasenia { get; set; }
 
+        public Usuario()
+        {
+
+        }
     }
 }

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using LiteDB;
+using Login.web.Models;
 
 namespace Login.web
 {
@@ -32,7 +33,7 @@ namespace Login.web
             });
 
             //Se lee ubicacion del archivo de la base de datos (nomina.db) desde el archivo appsetting.json
-            var databasePath = Configuration.GetSection("LiteDb").GetSection("nomina_db").Value;
+            var databasePath = Configuration.GetSection("LiteDB").GetSection("login_db").Value;
 
             //Configuro el contexto de la base de datos con la ubicacion del archivo (nomina.db)
             services.Configure<LiteDBConfig>(options => options.DatabasePath = databasePath);

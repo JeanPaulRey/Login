@@ -1,7 +1,20 @@
-﻿
-@{
-    ViewData["Title"] = "Editar";
-}
+﻿@model Login.Usuario
 
-<h1>Editar</h1>
+<h1 class="display-5 mt-5">Editar Usuario</h1>
+
+<form asp-controller="Usuario" asp-action="Editar" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input asp-for="nombreUsuario" type="text" placeholder="Nombre de usuario" class="form-control" />
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input asp-for="contrasenia" type="password" placeholder="Contraseña" class="form-control" />
+
+    </div>
+
+    <button type="submit" class="btn btn-outline-success">Guardar</button>
+    <a asp-controller="Usuario" asp-action="Index" role="button" class="btn btn-outline-secondary">Volver</a>
+</form>
 

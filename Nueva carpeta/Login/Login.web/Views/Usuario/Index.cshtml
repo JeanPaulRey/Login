@@ -1,0 +1,41 @@
+﻿ @model IEnumerable<Login.Usuario>
+
+<div class="row">
+    <div class="col-10">
+        <h2 class="display-4">Usuarios</h2>
+    </div>
+</div>
+<br />
+<a role="button" asp-controller="Usuario" asp-action="Agregar" class="btn btn-outline-primary">Agregar Usuario</a>
+<br />
+<br />
+<p>Cantidad de Usuarios: <b>@ViewBag.CantidadUsuarios</b></p>
+<table class="table table-dark table-striped table-responsive-md">
+    <thead>
+        <tr>
+            <th>ID </th>
+
+            <th>Nombre de Usuario </th>
+
+            <th>Contraseña </th>
+
+            <th>Opciones </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var usuario in Model)
+        {
+        <tr>
+            <td>@usuario.idUsuario</td>
+            <td>@usuario.nombreUsuario</td>
+            <td>@usuario.contrasenia</td>
+            <td>
+                <a asp-controller="Usuario" asp-action="Editar" asp-route-id="@usuario.idUsuario" class="btn btn-link">Editar</a> |
+                <a asp-controller="Usuario" asp-action="Eliminar" asp-route-id="@usuario.idUsuario" class="btn btn-link">Eliminar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+

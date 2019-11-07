@@ -6,7 +6,7 @@ namespace Login
 {
     public class Modulo
     {
-        public int idModulo { get; set; }
+        public int id { get; set; }
         public string nombre { get; set; }
 
         public float version { get; set; }

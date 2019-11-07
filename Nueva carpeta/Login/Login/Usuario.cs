@@ -6,7 +6,8 @@ namespace Login
 {
     public class Usuario
     {
-        public int idUsuario { get; set; }
+        public string idUsuario { get; set; }
+        public int id { get; set; }
         public string nombreUsuario { get; set; }
         public string contrasenia { get; set; }
 

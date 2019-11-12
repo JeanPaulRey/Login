@@ -9,7 +9,6 @@ namespace Login
         public string nombre { get; set; }
         public Modulo modulo { get; set; }
         public List<Empleado> Empleados { get; set; }
-
         public Empresa(string nombre)
         {
             Empleados = new List<Empleado>();

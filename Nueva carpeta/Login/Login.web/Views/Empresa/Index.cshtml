@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Login.Usuario>
+
+<div class="row">
+    <div class="col-10">
+        <h2 class="display-4">Empleados</h2>
+    </div>
+</div>
+<br />
+<br />
+<p>Cantidad de Empleados: <b>@ViewBag.CantidadEmpleados</b></p>
+<table class="table table-dark table-striped table-responsive-md">
+    <thead>
+        <tr>
+            <th>Usuario </th>
+
+            <th>Nombre </th>
+
+            <th>Apellido </th>
+
+            <th>DNI </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+        <tr>
+            <td>@usuario.nombreUsuario</td>
+            <td>@usuario.nombre</td>
+            <td>@usuario.apellido</td>
+            <td>@usuario.dni</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
